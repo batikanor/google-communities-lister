@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/communityListFragment">
+
+    <fragment
+        android:id="@+id/communityListFragment"
+        android:name="com.batikanor.google.communitieslister.CommunityListFragment"
+        android:label="fragment_community_list"
+        tools:layout="@layout/fragment_community_list" />
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.batikanor.google.communitieslister.CommunityFragment"
+        android:label="fragment_community"
+        tools:layout="@layout/fragment_community" />
+</navigation>
