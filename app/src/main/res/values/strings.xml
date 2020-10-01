@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Google Communities Lister</string>
+    <string name="description_label">Press the logo of a community to see its details</string>
+</resources>
