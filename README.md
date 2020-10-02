@@ -12,8 +12,8 @@ kotlin-android-extensions //< used for synthetic, I would normally use the recom
 * coil //< to show images from urls easily.
 
 ### Screenshots
-![Screen 1](Screenshots/screen_1.png?raw=true "Title")
-![Screen 2](Screenshots/screen_2.png?raw=true "Title")
+![Screen 1](Screenshots/Screen_1.png?raw=true "Title")
+![Screen 2](Screenshots/Screen_2.png?raw=true "Title")
 
 ### About me
 https://www.batikanor.com
