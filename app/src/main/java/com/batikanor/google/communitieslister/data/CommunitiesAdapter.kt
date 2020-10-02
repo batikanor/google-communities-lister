@@ -33,7 +33,7 @@ class CommunitiesAdapter(
 class CommunityViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(community: Community, onClick: (Community) -> Unit) {
         itemView.imageViewBanner.load(community.banner){
-            //crossfade(true)
+            crossfade(true)
             //transformations(CircleCropTransformation())
         }
 
