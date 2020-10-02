@@ -4,9 +4,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_main.*
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.batikanor.google.communitieslister.data.RetrofitProvider
+import com.batikanor.google.communitieslister.data.CommunitiesAdapter
+import com.batikanor.google.communitieslister.data.model.Community
 import kotlinx.android.synthetic.main.fragment_community_list.*
-import kotlinx.android.synthetic.main.fragment_community_list.description_label
+import kotlinx.coroutines.launch
 
 
 class CommunityListFragment : Fragment(R.layout.fragment_community_list) {
@@ -18,8 +22,31 @@ class CommunityListFragment : Fragment(R.layout.fragment_community_list) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        lifecycleScope.launch {
+            val response:List<Community>? = RetrofitProvider.communitiesMockApi.getCommunities()
+            //response.communities?.get(0)
+            recyclerViewCommunities.adapter = CommunitiesAdapter(response.orEmpty().toMutableList()){
+                val direction = CommunityListFragmentDirections.actionCommunityListFragmentToCommunityFragment(it)
+                findNavController().navigate(direction)
+
+            }
+
+        }
+
+
         description_label
-            .setOnClickListener { popDescriptionText() }
+            .setOnClickListener {
+                popDescriptionText()
+                //val num = (0..10).random()
+
+            }
+
+
+
+
+
+
     }
 
 
