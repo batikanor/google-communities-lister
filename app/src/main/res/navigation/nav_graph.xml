@@ -9,10 +9,19 @@
         android:id="@+id/communityListFragment"
         android:name="com.batikanor.google.communitieslister.CommunityListFragment"
         android:label="fragment_community_list"
-        tools:layout="@layout/fragment_community_list" />
+        tools:layout="@layout/fragment_community_list" >
+        <action
+            android:id="@+id/action_communityListFragment_to_communityFragment"
+            app:destination="@id/communityFragment"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/communityFragment"
         android:name="com.batikanor.google.communitieslister.CommunityFragment"
         android:label="fragment_community"
-        tools:layout="@layout/fragment_community" />
+        tools:layout="@layout/fragment_community" >
+        <argument
+            android:name="community"
+            app:argType="com.batikanor.google.communitieslister.data.model.Community" />
+    </fragment>
 </navigation>

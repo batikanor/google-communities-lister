@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main) //< The setContentView method associates the layout with the activity, and then inflates the layout.
 
-
     }
 
 

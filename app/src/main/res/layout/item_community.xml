@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="32dp"
+    app:cardElevation="16dp">
+
+
+
+    <ImageView
+        android:id="@+id/imageViewBanner"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:adjustViewBounds="true"
+        tools:srcCompat="@drawable/gdg_istanbul" />
+</androidx.cardview.widget.CardView>
